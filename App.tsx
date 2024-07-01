@@ -1,10 +1,10 @@
-import { View, Text } from "react-native"
+import { View, Text, SafeAreaView } from "react-native"
+import { HelloWorldScreen } from "./src/presentation/screens/HelloWorldScreen"
 
 export const App = () => {
   return (
-    <View>
-  
-  <Text>Hola</Text>
-    </View>
+    <SafeAreaView>
+      <HelloWorldScreen />
+    </SafeAreaView>
   )
 }
