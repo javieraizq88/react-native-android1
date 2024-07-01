@@ -1,13 +1,17 @@
 import { View, Text, StyleSheet } from "react-native"
 
-export const HelloWorldScreen = () => {
+interface Props {
+    name?: string;
+}
+
+
+export const HelloWorldScreen = ( {name = 'mundo'}: Props ) => {
     return (
         <View style={ styles.container } >
-            <Text style={ styles.title } >HelloWorldScreen</Text>
+            <Text numberOfLines={1} ellipsizeMode="tail"  style={ styles.title } >hola, {name} </Text>
         </View>
     )
 }
-
 
 const styles = StyleSheet.create({
     container: {
