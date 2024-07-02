@@ -5,12 +5,26 @@ export const useCalculator = () => {
     const [number, setNumbwer] = useState('0');
 
     const clean = () => {
-
+        setNumbwer('0');
     }
 
     // borra ultimo numero marcado
     const deleteOperation = () => {
+        let currentSign = '';
+        let temporalNumber = number;
 
+        // cambia el signo del numero a positivo si viene con -
+        if (number.includes('-')) {
+            currentSign = '-';
+            temporalNumber = number.replace('-', '') // -88 -> 88
+        }
+
+        // elimina el ultimo dato y mantiene el - o ''
+        if (temporalNumber.length > 1) {
+            return setNumbwer(currentSign + temporalNumber.slice(0, -1))
+        }
+
+        setNumbwer('0')
     }
 
     const toggleSign = () => {
@@ -63,6 +77,8 @@ export const useCalculator = () => {
 
         //methods
         buildNumber,
+        clean,
+        deleteOperation,
         toggleSign,
     }
 }
