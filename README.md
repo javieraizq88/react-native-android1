@@ -5,7 +5,20 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
       $ npm install react-native-paper
       $ npm install react-native-safe-area-context
       <!-- para q codigo se lea para IOS -> $ npx pod-install NO USAR, da error-->
-      
+-> react native vector icons      
+      $ npm install react-native-vector-icons
+      -> ANDROID
+            1. Edit android/app/build.gradle (NOT android/build.gradle) and add:
+
+                  $ project.ext.vectoricons = [
+                        iconFontNames: [ 'Ionicons.ttf'] // Specify font files
+                  ]
+
+                   apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
+
+
+
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
