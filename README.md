@@ -16,9 +16,41 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
 
                    apply from: file("../../node_modules/react-native-vector-icons/fonts.gradle")
 
+      -> IOS
+            1. Navigate to node_modules/react-native-vector-icons and drag the Fonts folder (or select specific fonts) into your Xcode project.
+
+            2. Make sure your app is checked under "Add to targets," and if adding the whole folder, check "Create groups."
+               Not familiar with Xcode? Check out this article.
+               Edit Info.plist and add a property called Fonts provided by application (or UIAppFonts if Xcode autocomplete is not working):
+
+            3. List of all available fonts to copy & paste in Info.plist
+                  <key>UIAppFonts</key>
+                  <array>
+                  <string>AntDesign.ttf</string>
+                  <string>Entypo.ttf</string>
+                  <string>EvilIcons.ttf</string>
+                  <string>Feather.ttf</string>
+                  <string>FontAwesome.ttf</string>
+                  <string>FontAwesome5_Brands.ttf</string>
+                  <string>FontAwesome5_Regular.ttf</string>
+                  <string>FontAwesome5_Solid.ttf</string>
+                  <string>FontAwesome6_Brands.ttf</string>
+                  <string>FontAwesome6_Regular.ttf</string>
+                  <string>FontAwesome6_Solid.ttf</string>
+                  <string>Foundation.ttf</string>
+                  <string>Ionicons.ttf</string>
+                  <string>MaterialIcons.ttf</string>
+                  <string>MaterialCommunityIcons.ttf</string>
+                  <string>SimpleLineIcons.ttf</string>
+                  <string>Octicons.ttf</string>
+                  <string>Zocial.ttf</string>
+                  <string>Fontisto.ttf</string>
+                  </array>
+
+            4. # npx pod-install
 
 
-
+            
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.

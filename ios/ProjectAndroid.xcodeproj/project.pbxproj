@@ -43,7 +43,8 @@
 		5709B34CF0A7D63546082F79 /* Pods-ProjectAndroid.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectAndroid.release.xcconfig"; path = "Target Support Files/Pods-ProjectAndroid/Pods-ProjectAndroid.release.xcconfig"; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-ProjectAndroid-ProjectAndroidTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectAndroid-ProjectAndroidTests.debug.xcconfig"; path = "Target Support Files/Pods-ProjectAndroid-ProjectAndroidTests/Pods-ProjectAndroid-ProjectAndroidTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ProjectAndroid.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ProjectAndroid.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		6A7D24BB0C305162E8097BCA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = ProjectAndroid/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		6A7D24BB0C305162E8097BCA /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ProjectAndroid/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		7810B9072C3465100089A339 /* Ionicons.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Ionicons.ttf; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ProjectAndroid/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ProjectAndroid-ProjectAndroidTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ProjectAndroid-ProjectAndroidTests.release.xcconfig"; path = "Target Support Files/Pods-ProjectAndroid-ProjectAndroidTests/Pods-ProjectAndroid-ProjectAndroidTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -111,6 +112,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		7810B9062C3464C10089A339 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				7810B9072C3465100089A339 /* Ionicons.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		832341AE1AAA6A7D00B99B32 /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
@@ -121,6 +130,7 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
+				7810B9062C3464C10089A339 /* Fonts */,
 				13B07FAE1A68108700A75B9A /* ProjectAndroid */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ProjectAndroidTests */,
@@ -590,10 +600,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
@@ -665,10 +672,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
