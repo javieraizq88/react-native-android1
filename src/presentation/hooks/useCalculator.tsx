@@ -2,7 +2,26 @@ import { useState } from "react"
 
 export const useCalculator = () => {
 
-    const [number, setNumbwer] = useState('0')
+    const [number, setNumbwer] = useState('0');
+
+    const clean = () => {
+
+    }
+
+    // borra ultimo numero marcado
+    const deleteOperation = () => {
+
+    }
+
+    const toggleSign = () => {
+        // si el numero viene con el -, se reemplaza por un string vacio
+        if (number.includes('-')) {
+            return setNumbwer(number.replace('-', ''))
+        }
+        // sino, se deja con el - y se agrega en numero
+        setNumbwer('-' + number);
+    }
+
 
     const buildNumber = (numberString: string) => {
 
@@ -17,12 +36,12 @@ export const useCalculator = () => {
 
             // si hay otro 0 y no hay .
             if (numberString === '0' && number.includes('.')) {
-                return setNumbwer( number + numberString );
+                return setNumbwer(number + numberString);
             }
 
             // si es diferente de 0, no hay . y es el primer numero
             if (numberString !== '0' && !number.includes('.')) {
-                return setNumbwer( numberString );
+                return setNumbwer(numberString);
             }
 
             // evitar el 000.000
@@ -44,5 +63,6 @@ export const useCalculator = () => {
 
         //methods
         buildNumber,
+        toggleSign,
     }
 }
