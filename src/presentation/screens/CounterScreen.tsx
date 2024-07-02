@@ -16,8 +16,6 @@ export const CounterScreen = () => {
                 onLongPress={ () => setCount(0) }
             />
 
-
-
         </View>
     )
 }

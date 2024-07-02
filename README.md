@@ -1,5 +1,11 @@
 This is a new [**React Native**](https://reactnative.dev) project, bootstrapped using [`@react-native-community/cli`](https://github.com/react-native-community/cli).
 
+# librerias usasdas
+-> react native paper
+      $ npm install react-native-paper
+      $ npm install react-native-safe-area-context
+      <!-- para q codigo se lea para IOS -> $ npx pod-install NO USAR, da error-->
+      
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.
@@ -12,7 +18,7 @@ To start Metro, run the following command from the _root_ of your React Native p
 
 ```bash
 # using npm
-npm start
+npx react-native start --reset-cache
 
 # OR using Yarn
 yarn start
