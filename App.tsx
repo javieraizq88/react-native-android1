@@ -7,19 +7,22 @@ import { CounterM3Screen } from "./src/presentation/screens/CounterM3Screen"
 
 
 import IonIcon from 'react-native-vector-icons/Ionicons'
+import { BoxObjectModelScreen } from "./src/presentation/screens/BoxObjectModelScreen"
 
 export const App = () => {
   return (
-    <PaperProvider
+    <PaperProvider 
       settings={{
         icon: (props) => <IonIcon {...props} />
       }}
     >
 
-      <SafeAreaView>
+      <SafeAreaView style={{ backgroundColor: 'rgba(189, 52, 52, 0.2)', flex: 1 }}>
         {/* <HelloWorldScreen name="Javiera Izquierdo" />  */}
         {/* <CounterScreen /> */}
-        <CounterM3Screen label={"Aumentar"} />
+        {/* <CounterM3Screen label={"Aumentar"} /> */}
+        <BoxObjectModelScreen/>
+
       </SafeAreaView>
     </PaperProvider>
   )

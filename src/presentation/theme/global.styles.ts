@@ -2,14 +2,12 @@ import { Platform, StyleSheet } from "react-native";
 
 export const globalStyles = StyleSheet.create ({
     container: {
-        alignItems: 'center',
-        justifyContent: 'center',
-        
-
+        backgroundColor:'#ffffff',
+        flex: 1
     },
     title: {
-        fontSize: 45,
-        color: 'black',
+        fontSize: 30,
+     borderWidth: 10,
     },
     fab: {
         position: 'absolute',
