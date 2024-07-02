@@ -1,5 +1,5 @@
 import { View, Text, StyleSheet } from "react-native"
-import { globalStyles } from "../theme/global.styles"
+import { globalStyles } from "../../config/theme/global.styles"
 
 export const BoxObjectModelScreen = () => {
     return(
