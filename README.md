@@ -50,6 +50,33 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
             4. # npx pod-install
 
 
+-> react navigation native https://reactnavigation.org/docs/getting-started/
+      $ npm install @react-navigation/native
+      1. Installing dependencies into a bare React Native project
+            $ npm install react-native-screens react-native-safe-area-context
+      MAC 
+            1. If you're on a Mac and developing for iOS
+                  $ npx pod-install ios
+
+      ANDROID
+            1. Edit MainActivity.kt or MainActivity.java file which is located under android/app/src/main/java/<your package name>/
+            2. agregar
+                  override fun onCreate(savedInstanceState: Bundle?) { super.onCreate(null) }
+            3. abajo de package statement en los imports 
+                  $ import android.os.Bundle;
+            4. envolver toda al app en un <NavigationContainer> </NavigationContainer> 
+
+
+->  react navigation stack
+      1. $ npm install @react-navigation/stack
+      2. $ npm install react-native-gesture-handler
+      3. en el App.tsx agregar 
+            $ import 'react-native-gesture-handler';
+      4, npm install @react-native-masked-view/masked-view
+      5. npx pod-install ios
+      6. crear el componente StackNavigator e importar los componentes
+      7. en App.tsx agregar el componente   <tackNavigator />
+
 
 # Getting Started
 
@@ -65,6 +92,8 @@ To start Metro, run the following command from the _root_ of your React Native p
 ```bash
 # actualizar dependencias 
 npm install
+npm install @react-navigation/native
+npm install react-native-screens react-native-safe-area-context
 
 # instalar libreria para IOS
 npx pod-install
