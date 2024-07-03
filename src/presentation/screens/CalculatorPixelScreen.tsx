@@ -24,8 +24,7 @@ export const CalculatorPixelScreen = () => {
                     {formula}
                 </Text>
 
-                {/* si el valor de la formula es igual a prevNumber, no muestra nada */}
-
+                {/* TODO si el valor de la formula es igual a prevNumber, no muestra nada */}
                 {
                     (formula === prevNumber)
                         ? <Text style={globalStyles.subResult} > </Text>
@@ -36,8 +35,6 @@ export const CalculatorPixelScreen = () => {
                             {(prevNumber === '0') ? '0' : prevNumber}
                         </Text>
                 }
-
-
             </View>
 
             <View style={globalStyles.row} >
