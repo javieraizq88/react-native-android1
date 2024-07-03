@@ -16,7 +16,6 @@ export const useCalculator = () => {
     const lasOperation = useRef<Operator>();
 
 
-
     const clean = () => {
         setNumbwer('0');
         setPrevNumbwer('0');
@@ -94,7 +93,6 @@ export const useCalculator = () => {
         setNumbwer('0');
     }
 
-
     const sumarOperation = () => {
         setLastNumber();
         lasOperation.current = Operator.sumar;
@@ -103,7 +101,6 @@ export const useCalculator = () => {
         setLastNumber();
         lasOperation.current = Operator.restar;
     }
-
     const multiplicarrOperation = () => {
         setLastNumber();
         lasOperation.current = Operator.multiplicar;
@@ -113,6 +110,34 @@ export const useCalculator = () => {
         lasOperation.current = Operator.dividir;
     }
 
+    const calcularResultado = () => {
+
+        // transformar el string a numero
+        const num1 = Number(number);
+        const num2 = Number(prevNumber);
+
+
+        switch (lasOperation.current) {
+            case Operator.sumar:
+                setNumbwer(`${num1 + num2}`);
+                break;
+            case Operator.restar:
+                setNumbwer(`${num2 - num1}`);
+                break;
+            case Operator.dividir:
+                setNumbwer(`${num2 / num1}`);
+                break;
+            case Operator.multiplicar:
+                setNumbwer(`${num1 * num2}`);
+                break;
+            default:
+                throw new Error('Operacion no valida')
+        }
+
+        //deja en 0 el prevNumber 
+        setPrevNumbwer('0')
+
+    }
 
 
     return {
@@ -131,5 +156,6 @@ export const useCalculator = () => {
         restarOperation,
         dividirOperation,
         multiplicarrOperation,
+        calcularResultado,
     }
 }
