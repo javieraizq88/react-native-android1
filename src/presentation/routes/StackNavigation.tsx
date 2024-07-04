@@ -6,7 +6,20 @@ import { ProfileScreen } from '../screens/profile/ProfileScreen';
 import { SettingsScreen } from '../screens/ssetting/SettingsScreen';
 import { ProductsScreen } from '../screens/products/ProductsScreen';
 
-const Stack = createStackNavigator();
+
+export type RootStackParams = {
+  Home: undefined,
+  Product: {
+    id: number,
+    name: string
+  },
+  Products: undefined,
+  About: undefined,
+  Profile: undefined,
+  Settings: undefined,
+}
+
+const Stack = createStackNavigator<RootStackParams>();
 
 export const StackNavigator = () => {
   return (
@@ -17,12 +30,12 @@ export const StackNavigator = () => {
         shadowColor: 'transparent'
       }
     }} >
-      <Stack.Screen name="Home" component={HomeScreen } />
-      <Stack.Screen name="Products" component={ ProductsScreen } />
-      <Stack.Screen name="Product" component={ ProductScreen } />
-      <Stack.Screen name="About" component={ AboutScreen } />
-      <Stack.Screen name="Profile" component={ ProfileScreen} />
-      <Stack.Screen name="Settings" component={ SettingsScreen } />
+      <Stack.Screen name="Home" component={HomeScreen} />
+      <Stack.Screen name="Products" component={ProductsScreen} />
+      <Stack.Screen name="Product" component={ProductScreen} />
+      <Stack.Screen name="About" component={AboutScreen} />
+      <Stack.Screen name="Profile" component={ProfileScreen} />
+      <Stack.Screen name="Settings" component={SettingsScreen} />
     </Stack.Navigator>
   );
 }
