@@ -78,6 +78,11 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
       7. en App.tsx agregar el componente   <tackNavigator />
 
 
+->  react navigation drawer
+      1. # npm install @react-navigation/drawer
+      2. # npm install react-native-gesture-handler react-native-reanimated
+      3. en babel.config.js agregar
+            #  plugins: ['react-native-reanimated/plugin']
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.

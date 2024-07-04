@@ -6,20 +6,23 @@ import { globalStyles } from "./config/theme/global.styles"
 import { CalculatorPixelScreen } from "./presentation/screens/CalculatorPixelScreen"
 import { NavigationContainer } from '@react-navigation/native';
 import { StackNavigator } from './presentation/routes/StackNavigation';
+import { SideMenuNavigator } from './presentation/routes/SideMenuNavigator';
 
 
 
 export const App = () => {
   return (
-      <NavigationContainer>
-        <StatusBar
-          backgroundColor={'black'}
-          barStyle={"light-content"}
-        />
-        {/* <CalculatorScreen /> */}
-        {/* <CalculatorPixelScreen /> */}
-        <StackNavigator />
-      </NavigationContainer>
+    <NavigationContainer>
+      <StatusBar
+        backgroundColor={'black'}
+        barStyle={"light-content"}
+      />
+      {/* <CalculatorScreen /> */}
+      {/* <CalculatorPixelScreen /> */}
+      {/* <StackNavigator /> */}
+      <SideMenuNavigator />
+
+    </NavigationContainer>
 
   )
 }
