@@ -8,8 +8,8 @@ export const HomeScreen = () => {
     const navigation = useNavigation();
     return (
         <View style={globalStyles.container} >
-            <PrimaryButton 
-            label={"Products"}
+            <PrimaryButton
+                label={"Products"}
                 onPress={() => navigation.navigate('Products' as never)} />
 
             <PrimaryButton
