@@ -85,8 +85,15 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
             #  plugins: ['react-native-reanimated/plugin']
 
 -> react navigation bottom tabs
-      1. npm install @react-navigation/bottom-tabs
+      $ npm install @react-navigation/bottom-tabs
             
+-> react navigation material-top-tabs
+      $ npm install @react-navigation/material-top-tabs react-native-tab-view
+      $ npm install react-native-pager-view
+      $ npx pod-install ios
+
+
+
 # Getting Started
 
 >**Note**: Make sure you have completed the [React Native - Environment Setup](https://reactnative.dev/docs/environment-setup) instructions till "Creating a new application" step, before proceeding.

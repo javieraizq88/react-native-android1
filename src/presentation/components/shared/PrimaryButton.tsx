@@ -5,15 +5,12 @@ import { useNavigation } from "@react-navigation/native";
 
 
 interface Props {
-
     label: string,
     onPress: () => void,
-    onLongPress?: () => void,
 }
 
 
-export const PrimaryButton = ({ label, onLongPress, onPress }: Props) => {
-
+export const PrimaryButton = ({ label, onPress }: Props) => {
 
     return (
         // counter
