@@ -84,7 +84,8 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
       3. en babel.config.js agregar
             #  plugins: ['react-native-reanimated/plugin']
 
-
+-> react navigation bottom tabs
+      1. npm install @react-navigation/bottom-tabs
             
 # Getting Started
 

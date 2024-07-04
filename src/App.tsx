@@ -7,6 +7,7 @@ import { CalculatorPixelScreen } from "./presentation/screens/CalculatorPixelScr
 import { NavigationContainer } from '@react-navigation/native';
 import { StackNavigator } from './presentation/routes/StackNavigation';
 import { SideMenuNavigator } from './presentation/routes/SideMenuNavigator';
+import { BottomTabsNavigator } from './presentation/routes/BottomTabsNavigator';
 
 
 
@@ -20,7 +21,8 @@ export const App = () => {
       {/* <CalculatorScreen /> */}
       {/* <CalculatorPixelScreen /> */}
       {/* <StackNavigator /> */}
-      <SideMenuNavigator />
+   <SideMenuNavigator /> 
+      {/* <BottomTabsNavigator /> */}
 
     </NavigationContainer>
 
