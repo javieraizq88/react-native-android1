@@ -5,6 +5,7 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
       $ npm install react-native-paper
       $ npm install react-native-safe-area-context
       <!-- para q codigo se lea para IOS -> $ npx pod-install NO USAR, da error-->
+      
 -> react native vector icons      
       $ npm install react-native-vector-icons
       -> ANDROID
