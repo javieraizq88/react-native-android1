@@ -110,7 +110,8 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
             $ 
 
 
-
+-> Axios
+      $ npm i axios
 
 
 # Step 1: clonar proyecto
