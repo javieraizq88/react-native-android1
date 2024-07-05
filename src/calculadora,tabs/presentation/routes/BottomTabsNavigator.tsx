@@ -2,9 +2,9 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { Tab1Screen } from '../screens/tabs/Tab1Screen';
 import { Tab2Screen } from '../screens/tabs/Tab2Screen';
 import { Tab3Screen } from '../screens/tabs/Tab3Screen';
-import { globalColors } from '../../config/theme/global.styles';
+import { globalColors } from '../../theme/global.styles';
 import { Text, Title } from 'react-native-paper';
-import { TopTabsNavigator } from '../components/shared/TopTabsNavigator';
+import { TopTabsNavigator } from '../components/TopTabsNavigator';
 import { StackNavigator } from './StackNavigation';
 
 const Tab = createBottomTabNavigator();

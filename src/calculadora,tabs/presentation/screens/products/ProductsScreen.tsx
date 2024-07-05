@@ -1,5 +1,5 @@
 import { FlatList, Text, View } from "react-native"
-import { globalStyles } from "../../../config/theme/global.styles"
+import { globalStyles } from "../../../theme/global.styles"
 import { PrimaryButton } from "../../components"
 import { type NavigationProp, useNavigation } from "@react-navigation/native"
 import { type RootStackParams } from "../../routes/StackNavigation"

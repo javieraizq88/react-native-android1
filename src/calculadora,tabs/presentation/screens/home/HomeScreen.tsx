@@ -1,5 +1,5 @@
 import { Pressable, Text, View } from "react-native"
-import { globalStyles } from "../../../config/theme/global.styles"
+import { globalStyles } from "../../../theme/global.styles"
 import { type NavigationProp, useNavigation, DrawerActions } from "@react-navigation/native"
 import { PrimaryButton } from "../../components"
 import { type RootStackParams } from "../../routes/StackNavigation"

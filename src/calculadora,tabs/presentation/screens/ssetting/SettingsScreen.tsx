@@ -1,5 +1,5 @@
 import { Text, View } from "react-native"
-import { globalStyles } from "../../../config/theme/global.styles"
+import { globalStyles } from "../../../theme/global.styles"
 import { StackActions, useNavigation } from "@react-navigation/native"
 import { PrimaryButton } from "../../components";
 

@@ -2,7 +2,7 @@ import 'react-native-gesture-handler';
 import { View, StatusBar, Text } from "react-native"
 import React, { } from "react"
 import { CalculatorScreen } from "./presentation/screens/CalculatorScreen"
-import { globalStyles } from "./config/theme/global.styles"
+import { globalStyles } from "./theme/global.styles"
 import { CalculatorPixelScreen } from "./presentation/screens/CalculatorPixelScreen"
 import { NavigationContainer } from '@react-navigation/native';
 import { StackNavigator } from './presentation/routes/StackNavigation';
@@ -21,7 +21,7 @@ export const App = () => {
       {/* <CalculatorScreen /> */}
       {/* <CalculatorPixelScreen /> */}
       {/* <StackNavigator /> */}
-   <SideMenuNavigator /> 
+      <SideMenuNavigator />
       {/* <BottomTabsNavigator /> */}
 
     </NavigationContainer>

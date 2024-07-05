@@ -1,6 +1,6 @@
 import { useState } from "react"
 import { Platform, Pressable, StyleSheet, Text, View } from "react-native"
-import { globalStyles } from "../../../config/theme/global.styles"
+import { globalStyles } from "../../theme/global.styles"
 import { useNavigation } from "@react-navigation/native";
 
 

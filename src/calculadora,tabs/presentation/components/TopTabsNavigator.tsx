@@ -1,7 +1,7 @@
 import { createMaterialTopTabNavigator } from '@react-navigation/material-top-tabs';
-import { HomeScreen } from '../../screens/home/HomeScreen';
-import { ProfileScreen } from '../../screens/profile/ProfileScreen';
-import { AboutScreen } from '../../screens/about/Abouts';
+import { HomeScreen } from '../screens/home/HomeScreen';
+import { ProfileScreen } from '../screens/profile/ProfileScreen';
+import { AboutScreen } from '../screens/about/Abouts';
 import { HamburgerMenu } from './HamburgerMenu';
 
 const Tab = createMaterialTopTabNavigator();

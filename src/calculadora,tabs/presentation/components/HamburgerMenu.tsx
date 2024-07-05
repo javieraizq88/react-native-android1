@@ -1,7 +1,7 @@
 import { useNavigation, NavigationProp, DrawerActions } from "@react-navigation/native";
 import { useEffect } from "react";
 import { Pressable, Text, View } from "react-native"
-import { RootStackParams } from "../../routes/StackNavigation";
+import { RootStackParams } from "../routes/StackNavigation";
 
 export const HamburgerMenu = () =>{
     const navigation = useNavigation<NavigationProp<RootStackParams>>();
