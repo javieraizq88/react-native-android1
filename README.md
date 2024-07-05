@@ -93,7 +93,8 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
       $ npm install react-native-pager-view
       $ npx pod-install ios
 
-
+-> zustand ---> gestor de estados useState
+      $ npm install zustand
 
 # Getting Started
 
