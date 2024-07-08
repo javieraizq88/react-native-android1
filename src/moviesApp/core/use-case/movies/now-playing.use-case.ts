@@ -7,11 +7,11 @@ import { Movie } from "../../models/movie.model";
 export const moviesNowPlayingUseCase = async (fetcher: HttpAdapter): Promise<Movie[]> => {
 
     try {
-
-        const nowPlaying = await fetcher.get<NowPlayingResponse>('/now_playing')
+        const nowPlaying = await fetcher.get<NowPlayingResponse>('/now_playing');
+        console.log({nowPlaying});
         return [];
     } catch (error) {
         console.log(error);
-        throw new Error(`Error fetching movies - NowPlaying`);
+        throw new Error('Error fetching movies - NowPlaying');
     }
 }
