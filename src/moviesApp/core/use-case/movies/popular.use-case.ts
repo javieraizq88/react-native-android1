@@ -1,0 +1,19 @@
+
+import { HttpAdapter } from "../../../config/adapters/http/http.adapter";
+import { PopularsMoviesDBResponse } from "../../../infrastructure/interfaces/movie-db.responses";
+import { MovieMapper } from "../../../infrastructure/mappers/movie.mapper";
+import { Movie } from "../../models/movie.model";
+
+// TODO trae las peliculas populares
+export const moviesPopularUseCase = async (fetcher: HttpAdapter): Promise<Movie[]> => {
+
+    try {
+        const popularMovie = await fetcher.get<PopularsMoviesDBResponse>('/popular');
+        return popularMovie.results.map( MovieMapper.fromMovieDBResultToModel );
+
+
+    } catch (error) {
+        console.log(error);
+        throw new Error('Error fetching movies - moviesPopularUseCase');
+    }
+}
