@@ -1,6 +1,6 @@
 import { createStackNavigator } from '@react-navigation/stack';
-import { HomeScreenMovie } from '../screens/home/HomeScreenMovie';
-import { DetailScreenMovie } from '../screens/details/DetailsScreenMovie';
+import { HomeScreen } from '../screens/home/HomeScreenMovie';
+import { DetailScreen } from '../screens/details/DetailsScreenMovie';
 
 export type RootStackParams ={
     Home: undefined;
@@ -11,9 +11,11 @@ const Stack = createStackNavigator<RootStackParams>();
 
 export const Navigation = () => {
   return (
-    <Stack.Navigator>
-      <Stack.Screen name="Home"  component={HomeScreenMovie} />
-      <Stack.Screen name="Details" component={DetailScreenMovie} />
+    <Stack.Navigator screenOptions={{
+      headerShown: false
+    }}>
+      <Stack.Screen name="Home"  component={HomeScreen} />
+      <Stack.Screen name="Details" component={DetailScreen} />
     </Stack.Navigator>
   );
 }

@@ -13,6 +13,8 @@ import { movieDBFetcher } from "../../config/adapters/movieDB.adapter"
 // 6) se cambia el state
 // 7) se saca el loading pq ya cargaron las peliculas
 
+let popularPageNumber = 1;
+
 export const useMovies = () => {
     // 1) se crean los state y setState de lo que viene en Movie
     const [isLoading, setIsLoading] = useState(true); // TODO cuando se muestre, empieza a cargar
@@ -65,5 +67,8 @@ export const useMovies = () => {
         popular,
         topRated,
         upcoming
+
+
+        
     }
 }

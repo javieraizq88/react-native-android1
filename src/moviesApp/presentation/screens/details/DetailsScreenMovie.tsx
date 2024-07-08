@@ -1,6 +1,6 @@
 import { View, Text } from "react-native"
 
-export const DetailScreenMovie =() => {
+export const DetailScreen =() => {
     return(
         <View>
             <Text>DetailScreenMovie</Text>
