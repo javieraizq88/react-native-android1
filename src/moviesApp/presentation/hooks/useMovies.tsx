@@ -13,7 +13,8 @@ import { movieDBFetcher } from "../../config/adapters/movieDB.adapter"
 // 6) se cambia el state
 // 7) se saca el loading pq ya cargaron las peliculas
 
-let popularPageNumber = 1;
+
+let popularPageNumber = 1; // TODO por defecto carga la pagina 1
 
 export const useMovies = () => {
     // 1) se crean los state y setState de lo que viene en Movie
@@ -66,9 +67,21 @@ export const useMovies = () => {
         nowPlaying,
         popular,
         topRated,
-        upcoming
+        upcoming,
+
+        // Methods
+
+        popularNextPage: async () => {
+            //TODO cuando yo lo llame, aumentara el valor del numero de la pagina actual 
+            popularPageNumber++;
+            //TODO devuelve las peliculas de la peticion
+            const popularMovies = await UseCases.moviesPopularUseCase( movieDBFetcher, {
+                page: popularPageNumber,
+            });
+            //TODO actualiza el State y se agregas las nuevas peliculas
+            setPopular( prev => [...prev, ...popularMovies ] );
 
 
-        
-    }
+        }
+    };
 }
