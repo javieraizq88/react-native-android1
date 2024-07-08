@@ -130,8 +130,9 @@ npx pod-install
 
 
 ### Step 3: clonar el archivo .env.template a .env y configurar las variables de entorno
-      $ npx react-native start --reset-cache
-
+```bash
+npx react-native start --reset-cache
+```
 
 ### For Android
 
