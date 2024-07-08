@@ -11,20 +11,22 @@ export const useMovies = () => {
 
 
     const [isLoading, setIsLoading] = useState(true); // TODO cuando se muestre, empieza a cargar
-    const [nowPlaying, setNowPlaying] = useState<Movie[]>( [] );
+    const [nowPlaying, setNowPlaying] = useState<Movie[]>([]);
 
-useEffect (() => {
+    useEffect(() => {
 
-    initialLoad();
+        initialLoad();
 
-}, []);
+    }, []);
 
-const initialLoad = async() => {
+    const initialLoad = async () => {
 
-    // TODO crea un await mientras carga la data de movieDBFetcher 
-     const nowPlayingMovies = await UseCases.moviesNowPlayingUseCase(movieDBFetcher);
-}
+        // TODO crea un await mientras carga la data de movieDBFetcher 
+        const nowPlayingMovies = await UseCases.moviesNowPlayingUseCase(movieDBFetcher);
+        console.log(nowPlayingMovies[0])
+    }
     return {
-
+        isLoading,
+        nowPlaying,
     }
 }
