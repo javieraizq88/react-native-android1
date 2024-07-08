@@ -21,12 +21,19 @@ export const HomeScreen = () => {
 
                 {/* carousel principal */}
                 <PosterCarousel movies={nowPlaying} />
+
                 {/* carousel populars */}
-                <HorizontalCarousel movies={popular} title="Populars Movies" />
+                <HorizontalCarousel 
+                movies={popular} 
+                title="Populars Movies" 
+                loadNextPage={ () => console.log('fin')}
+                
+                />
                 {/* carousel to rated */}
                 <HorizontalCarousel movies={topRated} title="Rating" />
                 {/* carousel Upcoming */}
                 <HorizontalCarousel movies={upcoming} title="Upcoming" />
+
             </View>
         </ScrollView>
     )
