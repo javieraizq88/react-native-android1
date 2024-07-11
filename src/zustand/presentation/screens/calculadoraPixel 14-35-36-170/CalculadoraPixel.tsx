@@ -1,6 +1,6 @@
 import { CalculatorPixelScreen } from "../../../../calculadora,tabs/presentation/screens/CalculatorPixelScreen"
 
-export const Calculadora2 = () => {
+export const CalculatorButton2 = () => {
     return (
         < >
         <CalculatorPixelScreen/>

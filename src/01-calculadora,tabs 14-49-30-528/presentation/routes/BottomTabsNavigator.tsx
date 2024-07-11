@@ -1,11 +1,9 @@
-import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
-import { Tab1Screen } from '../screens/tabs/Tab1Screen';
-import { Tab2Screen } from '../screens/tabs/Tab2Screen';
-import { Tab3Screen } from '../screens/tabs/Tab3Screen';
-import { globalColors } from '../../theme/global.styles';
-import { Text, Title } from 'react-native-paper';
-import { TopTabsNavigator } from '../components/TopTabsNavigator';
-import { StackNavigator } from './StackNavigation';
+import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
+import { Text } from "react-native";
+import { TopTabsNavigator } from "../../../calculadora,tabs/presentation/components/TopTabsNavigator";
+import { StackNavigator } from "../../../calculadora,tabs/presentation/routes/StackNavigation";
+import { Tab1Screen } from "../../../calculadora,tabs/presentation/screens/tabs/Tab1Screen";
+import { globalColors } from "../../../zustand/config/app-theme";
 
 const Tab = createBottomTabNavigator();
 
