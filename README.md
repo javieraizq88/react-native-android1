@@ -114,6 +114,22 @@ This is a new [**React Native**](https://reactnative.dev) project, bootstrapped 
       $ npm i axios
 
 
+-> dotenv para encriptar variables de entorno
+      1. npm install -D react-native-dotenv
+      2. en babelconfig agregar el plug in 
+                ['module:react-native-dotenv', 
+                        {
+                              envName: 'APP_ENV',
+                              moduleName: '@env',
+                              path: '.env'
+                        }
+                ]
+      3. crear archivo types/env.d.ts y agregar 
+            declare module '@env' {
+                  export const THE_MOVIE_DB_KEY: string;
+            }
+      4. reiniciar el computador y correr la app
+
 # Step 1: clonar proyecto
 
 
