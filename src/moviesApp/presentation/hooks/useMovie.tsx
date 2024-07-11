@@ -17,10 +17,10 @@ export const useMovie = (movieId: number) => {
         setIsLoading(true);
 
         const fullMovie = await UseCases.getMovieByIdUseCase(movieDBFetcher, movieId);
-        setMovie( fullMovie );
-        setIsLoading( false );
+        setMovie(fullMovie);
+        setIsLoading(false);
 
-console.log(fullMovie)
+        console.log(fullMovie)
 
     }
     return {
