@@ -1,11 +1,8 @@
 import React, { useState } from "react"
-import { StyleSheet, Text, View } from "react-native"
-import { PrimaryButton } from "../components"
-import { Button } from 'react-native-paper'
+import { Text, View } from "react-native"
 import { globalStyles } from "../../theme/global.styles"
 
 import Icon from 'react-native-vector-icons/Ionicons'
-
 
 import { FAB } from 'react-native-paper'
 
@@ -24,10 +21,10 @@ export const CounterM3Screen = ({ label, onLongPress, onPress }: Props) => {
         <View style={globalStyles.container} >
             <Text style={globalStyles.title} >{count}</Text>
 
-            {/* <Icon
+           <Icon
                   name='accessibility-outline'
                size={ 45 }
-              /> */}
+              /> 
 
             <FAB
                 label="+1"
