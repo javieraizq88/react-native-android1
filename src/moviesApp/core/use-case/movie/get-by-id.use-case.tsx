@@ -12,9 +12,9 @@ export const getMovieByIdUseCase = async (
         const movie = await fetcher.get<MovieBDId>(`/${movieId}`);
 
         // mapeo
-        const fullMovie = MovieMapper.fromMovieDBToModel( movie );
+        const fullMovie = MovieMapper.fromMovieDBToModel(movie);
         return fullMovie;
     } catch (error) {
-        throw new Error (`cannot get mnovie by id: ${movieId}`)
+        throw new Error(`cannot get mnovie by id: ${movieId}`)
     }
 }
