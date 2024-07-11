@@ -6,7 +6,7 @@ interface Props {
   //  movie: FullMovie; // TODO -> en vez de llamar a todas las propiedades, se llama a las q voy a usar
   poster: string;
   originalTitle: string;
-   title: string;
+  title: string;
 }
 
 
@@ -20,25 +20,25 @@ export const MovieHeader = ({ poster, originalTitle, title }: Props) => {
     <>
       <View style={{ ...styles.imageContainer, height: screenHeight * 0.7 }}>
 
-        <View style={ styles.imageBorder }>
-          <Image 
-            style={ styles.posterImage }
+        <View style={styles.imageBorder}>
+          <Image
+            style={styles.posterImage}
             source={{ uri: poster }}
           />
         </View>
       </View>
 
-     <View style={ styles.marginContainer }>
-        <Text style={ styles.subTitle }>{ originalTitle }</Text>
-        <Text style={ styles.title }>{ title }</Text>
+      <View style={styles.marginContainer}>
+        <Text style={styles.subTitle}>{originalTitle}</Text>
+        <Text style={styles.title}>{title}</Text>
       </View>
 
-      <View style={ styles.backButton }>
-        <Pressable onPress={ () => navigation.goBack() }>
-          <Text style={ styles.backButtonText }>Regresar</Text>
+      <View style={styles.backButton}>
+        <Pressable onPress={() => navigation.goBack()}>
+          <Text style={styles.backButtonText}>Regresar</Text>
         </Pressable>
       </View>
-    
+
     </>
   )
 }
@@ -94,7 +94,7 @@ const styles = StyleSheet.create({
     fontSize: 25,
     fontWeight: 'bold',
     textShadowColor: 'rgba(0, 0, 0, 0.55)',
-    textShadowOffset: {width: -1, height: 1},
+    textShadowOffset: { width: -1, height: 1 },
     textShadowRadius: 10,
   },
 });

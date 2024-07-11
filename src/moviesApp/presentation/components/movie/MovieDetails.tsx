@@ -1,6 +1,9 @@
 import { Text, View } from 'react-native'
 import { FullMovie } from '../../../core/models/movie.model';
 import { Formatter } from '../../../config/helpers/formatter';
+import { Cast } from '../../../core/models/cast.model';
+import { FlatList } from 'react-native-gesture-handler';
+import { CastActor } from '../cast/CastActor';
 
 interface Props {
     // movie: FullMovie; // TODO -> en vez de llamar a todas las propiedades, se llama a las q voy a usar
@@ -8,10 +11,11 @@ interface Props {
     genres: string[];
     description: string;
     budget: number;
+    cast: Cast[];
 }
 
 
-export const MovieDetails = ({ rating, genres, description, budget }: Props) => {
+export const MovieDetails = ({ rating, genres, description, budget, cast }: Props) => {
     return (
         <>
             <View style={{ marginHorizontal: 20 }}>
@@ -31,7 +35,7 @@ export const MovieDetails = ({ rating, genres, description, budget }: Props) => 
 
 
                 {/* casting */}
-                <View style={{ marginTop: 10, marginBottom: 100 }} >
+                <View style={{ marginTop: 10, marginBottom: 50 }} >
                     <Text style={{
                         marginVertical: 10,
                         marginHorizontal: 20,
@@ -40,6 +44,16 @@ export const MovieDetails = ({ rating, genres, description, budget }: Props) => 
                     }} >
                         Actores
                     </Text>
+
+                    <FlatList
+                        data={cast}
+                        keyExtractor={(item) => item.id.toString()}
+                        horizontal
+                        showsHorizontalScrollIndicator={false}
+                        renderItem={({ item }) => <CastActor actor={ item } />}
+                    >
+
+                    </FlatList>
 
                 </View>
             </View>

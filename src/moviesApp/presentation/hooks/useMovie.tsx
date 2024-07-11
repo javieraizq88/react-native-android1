@@ -28,11 +28,10 @@ export const useMovie = (movieId: number) => {
 
         setCast(cast);
 
-        console.log({ cast })
-
     }
     return {
         isLoading,
-        movie
+        movie,
+        cast
     }
 }
